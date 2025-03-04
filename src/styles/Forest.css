@@ -1,0 +1,57 @@
+.forest-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a3d9a5, #6dbf73);
+    overflow: hidden;
+  }
+  
+  /* ☀️ Sun (Fixed in the sky) */
+  .sun {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #ffdb58, #ffac33);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 200, 0, 0.6);
+  }
+  
+  /* 🌳 Trees */
+  .tree {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background: url("https://i.imgur.com/q23wPhl.png") no-repeat center/contain;
+  }
+  
+  /* 🐦 Birds */
+  .bird {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background: url("https://i.imgur.com/dJZ2Ppm.png") no-repeat center/contain;
+    animation: flyAnimation infinite linear;
+  }
+  
+  /* 🦋 New Butterflies */
+  .butterfly {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(https://www.shutterstock.com/image-photo/flying-colored-butterfly-shadow-below-260nw-1514607545.jpg)no-repeat center/contain;
+    animation: flutterAnimation infinite alternate ease-in-out;
+  }
+  
+  /* 🌳 Animations */
+  @keyframes flyAnimation {
+    0% { transform: translateX(0px) translateY(0px); }
+    100% { transform: translateX(50px) translateY(-10px); }
+  }
+  
+  @keyframes flutterAnimation {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-10px) rotate(5deg); }
+  }
+  
